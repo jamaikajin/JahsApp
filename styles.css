@@ -1,0 +1,191 @@
+body {
+    font-family: "helvetica Neue", "Arial", "sans-serif";
+    background-color:#bce9c6;
+}
+
+h1,h2 {
+    text-align: center
+    }
+    
+#footer {
+    background-color:#ff8e6b;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:1px; 
+}
+
+header{
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+}
+
+
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: transparent;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 0px solid #111;
+  border-bottom: 0px solid #000;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: .5em;
+  background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+  color: #ff8e6b;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #bce9c6; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  
+  /* non-critical apperance styles */
+  padding: 4em;
+  background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);
+  background-size: 200%;
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+body {
+    /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+}
+
+/* Additional non-critical styles */
+
+h1, h3, p {
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+
+code {
+    padding: 2px;
+    background: #ddd;
+}
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%; font-family: Helvetica nueue, Arial, sans-serif; }
+
+
+
+
+.ui-btn {
+   border: 2px solid #183140;
+   background: #ff8e68;
+   background: -webkit-gradient(linear, left top, left bottom, from(#f0b8a6), to(#ff8e68));
+   background: -webkit-linear-gradient(top, #f0b8a6, #ff8e68);
+   background: -moz-linear-gradient(top, #f0b8a6, #ff8e68);
+   background: -ms-linear-gradient(top, #f0b8a6, #ff8e68);
+   background: -o-linear-gradient(top, #f0b8a6, #ff8e68);
+   background-image: -ms-linear-gradient(top, #f0b8a6 0%, #ff8e68 100%);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #7ea4bd 0 1px 0;
+   color: #000000;
+   font-size: 15px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.ui-btn:hover {
+   border: 2px solid #bce9c6;
+   text-shadow: #1e4158 0 1px 0;
+   background: #ff8e68;
+   background: -webkit-gradient(linear, left top, left bottom, from(#f0b8a6), to(#ff8e68));
+   background: -webkit-linear-gradient(top, #f0b8a6, #ff8e68);
+   background: -moz-linear-gradient(top, #f0b8a6, #ff8e68);
+   background: -ms-linear-gradient(top, #f0b8a6, #ff8e68);
+   background: -o-linear-gradient(top, #f0b8a6, #ff8e68);
+   background-image: -ms-linear-gradient(top, #f0b8a6 0%, #ff8e68 100%);
+   color: #06416c;
+   }
+.ui-btn:active {
+   text-shadow: #1e4158 0 1px 0;
+   border: 2px solid #c7d4db;
+   background: #f0b8a6;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ff8e68), to(#ff8e68));
+   background: -webkit-linear-gradient(top, #ff8e68, #f0b8a6);
+   background: -moz-linear-gradient(top, #ff8e68, #f0b8a6);
+   background: -ms-linear-gradient(top, #ff8e68, #f0b8a6);
+   background: -o-linear-gradient(top, #ff8e68, #f0b8a6);
+   background-image: -ms-linear-gradient(top, #ff8e68 0%, #f0b8a6 100%);
+   color: #000000;
+   }
